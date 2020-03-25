@@ -9,6 +9,7 @@
 import UIKit
 import WebKit
 
+@available(iOS 9.0, *)
 open class BrowserViewController: UIViewController {
     
     public enum Method: String {
@@ -116,12 +117,14 @@ open class BrowserViewController: UIViewController {
     }
 }
 
+@available(iOS 9.0, *)
 extension BrowserViewController: WKNavigationDelegate {
     public func webView(_ webView: WKWebView, didFinish navigation: WKNavigation!) {
         
     }
 }
 
+@available(iOS 9.0, *)
 extension BrowserViewController: WKScriptMessageHandler {
     public func userContentController(_ userContentController: WKUserContentController, didReceive message: WKScriptMessage) {
         NSLog("message \(message.body)")
