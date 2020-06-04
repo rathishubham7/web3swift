@@ -9,7 +9,7 @@ Pod::Spec.new do |spec|
     spec.author       = { "Shubham Rathi" => "rathishubham017@gmail.com" }
     spec.source       = { :git => 'https://github.com/rathishubham7/web3swift', :tag => spec.version.to_s }
     spec.source_files = "Sources/web3swift/{Contract,Convenience,EthereumABI,EthereumAddress,HookedFunctions,KeystoreManager,Promises,SwiftRLP,Transaction,Web3,Browser}/*.swift", "Sources/web3swift/{Tokens,Utils}/**/*.swift"
-    spec.resource_bundle = { "Browser" => "Sources/web3swift/Browser/*.js" }
+    # spec.resource_bundle = { "Browser" => "Sources/web3swift/Browser/*.js" }
     spec.swift_version = '5.0'
     spec.frameworks = 'CoreImage'
     spec.dependency 'PromiseKit', '~> 6.13.1'
