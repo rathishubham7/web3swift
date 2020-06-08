@@ -4,8 +4,8 @@
  * file COPYING or http://www.opensource.org/licenses/mit-license.php.*
  **********************************************************************/
 
-#ifndef SECP256K1_UTIL_H
-#define SECP256K1_UTIL_H
+#ifndef SECP256K1_2_UTIL_H
+#define SECP256K1_2_UTIL_H
 
 #include "secp256k1-config.h"
 
@@ -16,9 +16,9 @@
 typedef struct {
     void (*fn)(const char *text, void* data);
     const void* data;
-} secp256k1_callback;
+} secp256k1_2_callback;
 
-static SECP256K1_INLINE void secp256k1_callback_call(const secp256k1_callback * const cb, const char * const text) {
+static SECP256K1_2_INLINE void secp256k1_2_callback_call(const secp256k1_2_callback * const cb, const char * const text) {
     cb->fn(text, (void*)cb->data);
 }
 
@@ -66,36 +66,36 @@ static SECP256K1_INLINE void secp256k1_callback_call(const secp256k1_callback * 
 #define VERIFY_SETUP(stmt)
 #endif
 
-static SECP256K1_INLINE void *checked_malloc(const secp256k1_callback* cb, size_t size) {
+static SECP256K1_2_INLINE void *checked_malloc(const secp256k1_2_callback* cb, size_t size) {
     void *ret = malloc(size);
     if (ret == NULL) {
-        secp256k1_callback_call(cb, "Out of memory");
+        secp256k1_2_callback_call(cb, "Out of memory");
     }
     return ret;
 }
 
-static SECP256K1_INLINE void *checked_realloc(const secp256k1_callback* cb, void *ptr, size_t size) {
+static SECP256K1_2_INLINE void *checked_realloc(const secp256k1_2_callback* cb, void *ptr, size_t size) {
     void *ret = realloc(ptr, size);
     if (ret == NULL) {
-        secp256k1_callback_call(cb, "Out of memory");
+        secp256k1_2_callback_call(cb, "Out of memory");
     }
     return ret;
 }
 
 /* Macro for restrict, when available and not in a VERIFY build. */
-#if defined(SECP256K1_BUILD) && defined(VERIFY)
-# define SECP256K1_RESTRICT
+#if defined(SECP256K1_2_BUILD) && defined(VERIFY)
+# define SECP256K1_2_RESTRICT
 #else
 # if (!defined(__STDC_VERSION__) || (__STDC_VERSION__ < 199901L) )
-#  if SECP256K1_GNUC_PREREQ(3,0)
-#   define SECP256K1_RESTRICT __restrict__
+#  if SECP256K1_2_GNUC_PREREQ(3,0)
+#   define SECP256K1_2_RESTRICT __restrict__
 #  elif (defined(_MSC_VER) && _MSC_VER >= 1400)
-#   define SECP256K1_RESTRICT __restrict
+#   define SECP256K1_2_RESTRICT __restrict
 #  else
-#   define SECP256K1_RESTRICT
+#   define SECP256K1_2_RESTRICT
 #  endif
 # else
-#  define SECP256K1_RESTRICT restrict
+#  define SECP256K1_2_RESTRICT restrict
 # endif
 #endif
 
@@ -109,11 +109,11 @@ static SECP256K1_INLINE void *checked_realloc(const secp256k1_callback* cb, void
 
 #if defined(HAVE___INT128)
 # if defined(__GNUC__)
-#  define SECP256K1_GNUC_EXT __extension__
+#  define SECP256K1_2_GNUC_EXT __extension__
 # else
-#  define SECP256K1_GNUC_EXT
+#  define SECP256K1_2_GNUC_EXT
 # endif
-SECP256K1_GNUC_EXT typedef unsigned __int128 uint128_t;
+SECP256K1_2_GNUC_EXT typedef unsigned __int128 uint128_t;
 #endif
 
-#endif /* SECP256K1_UTIL_H */
+#endif /* SECP256K1_2_UTIL_H */

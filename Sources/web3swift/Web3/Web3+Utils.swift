@@ -8,7 +8,7 @@ import Foundation
 import BigInt
 import CryptoSwift
 //import SwiftRLP
-//import secp256k1_swift
+//import secp256k1_2_swift
 //import EthereumAddress
 
 public typealias Web3Utils = Web3.Utils
@@ -6095,7 +6095,7 @@ extension Web3.Utils {
         return String(quotient) + decimalSeparator + remainderPadded
     }
     
-    /// Recover the Ethereum address from recoverable secp256k1 signature. Message is first hashed using the "personal hash" protocol.
+    /// Recover the Ethereum address from recoverable secp256k1_2 signature. Message is first hashed using the "personal hash" protocol.
     /// BE WARNED - changing a message will result in different Ethereum address, but not in error.
     ///
     /// Input parameters should be hex Strings.
@@ -6105,7 +6105,7 @@ extension Web3.Utils {
         return Web3.Utils.personalECRecover(data, signature:sig)
     }
     
-    /// Recover the Ethereum address from recoverable secp256k1 signature. Message is first hashed using the "personal hash" protocol.
+    /// Recover the Ethereum address from recoverable secp256k1_2 signature. Message is first hashed using the "personal hash" protocol.
     /// BE WARNED - changing a message will result in different Ethereum address, but not in error.
     ///
     /// Input parameters should be Data objects.
@@ -6129,7 +6129,7 @@ extension Web3.Utils {
     }
     
     
-    /// Recover the Ethereum address from recoverable secp256k1 signature.
+    /// Recover the Ethereum address from recoverable secp256k1_2 signature.
     /// Takes a hash of some message. What message is hashed should be checked by user separately.
     ///
     /// Input parameters should be Data objects.

@@ -4,8 +4,8 @@
  * file COPYING or http://www.opensource.org/licenses/mit-license.php.*
  **********************************************************************/
 
-#ifndef SECP256K1_BASIC_CONFIG_H
-#define SECP256K1_BASIC_CONFIG_H
+#ifndef SECP256K1_2_BASIC_CONFIG_H
+#define SECP256K1_2_BASIC_CONFIG_H
 
 #ifdef USE_BASIC_CONFIG
 
@@ -30,4 +30,4 @@
 
 #endif /* USE_BASIC_CONFIG */
 
-#endif /* SECP256K1_BASIC_CONFIG_H */
+#endif /* SECP256K1_2_BASIC_CONFIG_H */
