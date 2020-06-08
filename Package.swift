@@ -18,10 +18,10 @@ let package = Package(
   targets: [
     // Targets are the basic building blocks of a package. A target can define a module or a test suite.
     // Targets can depend on other targets in this package, and on products in packages which this package depends on.
-    .target(name: "secp256k1"),
+    .target(name: "secp256k1_spm"),
     .target(
       name: "web3swift",
-      dependencies: ["BigInt", "secp256k1", "PromiseKit", "Starscream", "CryptoSwift"],
+      dependencies: ["BigInt", "secp256k1_spm", "PromiseKit", "Starscream", "CryptoSwift"],
       exclude: [
         ]),
     .testTarget(

@@ -7,6 +7,9 @@
 //
 
 import Foundation
+#if canImport(secp256k1_spm)
+import secp256k1_spm
+#endif
 
 public struct SECP256K1 {
     public struct UnmarshaledSignature{
