@@ -15,7 +15,6 @@ Pod::Spec.new do |spec|
       'HEADER_SEARCH_PATHS' => '"${PODS_TARGET_SRCROOT}/Sources/secp256k1/include"',
       'LIBRARY_SEARCH_PATHS' => '"${PODS_TARGET_SRCROOT}/Sources/secp256k1/lib"'
     }
-    spec.resource_bundle = { "Browser" => "Sources/web3swift/Browser/*.js" }
     spec.swift_version = '5.0'
     spec.module_name = 'web3swift'
     spec.frameworks = 'CoreImage'
