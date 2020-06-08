@@ -8,8 +8,14 @@ Pod::Spec.new do |spec|
     spec.homepage     = 'https://github.com/rathishubham7/web3swift'
     spec.author       = { "Shubham Rathi" => "rathishubham017@gmail.com" }
     spec.source       = { :git => 'https://github.com/rathishubham7/web3swift.git', :tag => spec.version.to_s }
-    spec.source_files = "Sources/web3swift/{Contract,Convenience,EthereumABI,EthereumAddress,HookedFunctions,KeystoreManager,Promises,SwiftRLP,Transaction,Web3,Browser}/*.swift", "Sources/web3swift/{Tokens,Utils}/**/*.swift", "Source/secp256k1/**/*.{h,c}", "Source/secp256k1/*.{h,c}"
-    # spec.resource_bundle = { "Browser" => "Sources/web3swift/Browser/*.js" }
+    spec.source_files = "Sources/web3swift/{Contract,Convenience,EthereumABI,EthereumAddress,HookedFunctions,KeystoreManager,Promises,SwiftRLP,Transaction,Web3,Browser}/*.swift", "Sources/web3swift/{Tokens,Utils}/**/*.swift", "Sources/secp256k1/include/*.{h,c}"
+    spec.vendored_libraries  = 'Sources/secp256k1/lib/libsecp256k1-torus.a'
+    spec.preserve_paths = 'Sources/secp256k1'
+    spec.pod_target_xcconfig = {
+      'HEADER_SEARCH_PATHS' => '"${PODS_TARGET_SRCROOT}/Sources/secp256k1/include"',
+      'LIBRARY_SEARCH_PATHS' => '"${PODS_TARGET_SRCROOT}/Sources/secp256k1/lib"'
+    }
+    spec.resource_bundle = { "Browser" => "Sources/web3swift/Browser/*.js" }
     spec.swift_version = '5.0'
     spec.module_name = 'web3swift'
     spec.frameworks = 'CoreImage'

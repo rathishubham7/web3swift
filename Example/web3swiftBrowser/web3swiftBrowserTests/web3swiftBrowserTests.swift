@@ -7,7 +7,6 @@
 //
 
 import XCTest
-@testable import web3swiftBrowser
 
 class web3swiftBrowserTests: XCTestCase {
     

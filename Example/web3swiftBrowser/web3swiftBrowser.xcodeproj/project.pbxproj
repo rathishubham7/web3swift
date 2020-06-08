@@ -10,13 +10,11 @@
 		81E09B202002623A005DF51D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81E09B1F2002623A005DF51D /* AppDelegate.swift */; };
 		81E09B222002623A005DF51D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81E09B212002623A005DF51D /* ViewController.swift */; };
 		81E09B252002623A005DF51D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 81E09B232002623A005DF51D /* Main.storyboard */; };
-		81E09B282002623A005DF51D /* web3swiftBrowser.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 81E09B262002623A005DF51D /* web3swiftBrowser.xcdatamodeld */; };
 		81E09B2A2002623A005DF51D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 81E09B292002623A005DF51D /* Assets.xcassets */; };
 		81E09B2D2002623A005DF51D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 81E09B2B2002623A005DF51D /* LaunchScreen.storyboard */; };
 		81E09B382002623B005DF51D /* web3swiftBrowserTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81E09B372002623B005DF51D /* web3swiftBrowserTests.swift */; };
 		81E09B432002623B005DF51D /* web3swiftBrowserUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81E09B422002623B005DF51D /* web3swiftBrowserUITests.swift */; };
 		C2C40799AB45A254C5B8B694 /* Pods_web3swiftBrowser.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3D2B1946592C2F6161DF2A16 /* Pods_web3swiftBrowser.framework */; };
-		E2EDC5F0241EECFD00410EA6 /* browser.min.js in Resources */ = {isa = PBXBuildFile; fileRef = E2EDC5EF241EECFD00410EA6 /* browser.min.js */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -267,7 +265,6 @@
 				81E09B2D2002623A005DF51D /* LaunchScreen.storyboard in Resources */,
 				81E09B2A2002623A005DF51D /* Assets.xcassets in Resources */,
 				81E09B252002623A005DF51D /* Main.storyboard in Resources */,
-				E2EDC5F0241EECFD00410EA6 /* browser.min.js in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -340,7 +337,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				81E09B222002623A005DF51D /* ViewController.swift in Sources */,
-				81E09B282002623A005DF51D /* web3swiftBrowser.xcdatamodeld in Sources */,
 				81E09B202002623A005DF51D /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
