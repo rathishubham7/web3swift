@@ -10,38 +10,34 @@ PODS:
     - PromiseKit/CorePromise
   - PromiseKit/UIKit (6.13.1):
     - PromiseKit/CorePromise
-  - secp256k1.c (0.1.2)
   - Starscream (3.1.1)
-  - web3swift (2.2.1):
+  - Torus-web3swift (3.0.3):
     - BigInt (~> 5.0)
     - CryptoSwift (~> 1.0.0)
     - PromiseKit (~> 6.13.1)
-    - secp256k1.c (~> 0.1)
     - Starscream (~> 3.1.0)
 
 DEPENDENCIES:
-  - web3swift (from `../../`)
+  - Torus-web3swift (from `../../`)
 
 SPEC REPOS:
   trunk:
     - BigInt
     - CryptoSwift
     - PromiseKit
-    - secp256k1.c
     - Starscream
 
 EXTERNAL SOURCES:
-  web3swift:
+  Torus-web3swift:
     :path: "../../"
 
 SPEC CHECKSUMS:
   BigInt: 74b4d88367b0e819d9f77393549226d36faeb0d8
   CryptoSwift: d81eeaa59dc5a8d03720fe919a6fd07b51f7439f
   PromiseKit: 28fda91c973cc377875d8c0ea4f973013c05b6db
-  secp256k1.c: db47b726585d80f027423682eb369729e61b3b20
   Starscream: 4bb2f9942274833f7b4d296a55504dcfc7edb7b0
-  web3swift: 9713c10312d66d52da24b8775bc93b57408be3c1
+  Torus-web3swift: aebbfb33fb562d7cc9f792652c7a230866edebff
 
-PODFILE CHECKSUM: 0fdcb66c1e21400e017387d14550cd6ae5ef8aaa
+PODFILE CHECKSUM: 136ec34d891194ab6b1fc5f6a12b20b9b2f87942
 
 COCOAPODS: 1.9.3
