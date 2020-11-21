@@ -1,6 +1,6 @@
 Pod::Spec.new do |spec|
     spec.name         = 'Torus-web3swift'
-    spec.version      = '3.0.6'
+    spec.version      = '3.0.7'
     spec.ios.deployment_target = "9.0"
     spec.osx.deployment_target = "10.11"
     spec.license      = { :type => 'Apache License 2.0', :file => 'LICENSE.md' }
@@ -22,4 +22,6 @@ Pod::Spec.new do |spec|
     spec.dependency 'BigInt', '~> 5.0'
     spec.dependency 'Starscream', '~> 3.1.0'
     spec.dependency 'CryptoSwift', '~> 1.0.0'
+    spec.pod_target_xcconfig = { 'EXCLUDED_ARCHS[sdk=iphonesimulator*]' => 'arm64' }
+    spec.user_target_xcconfig = { 'EXCLUDED_ARCHS[sdk=iphonesimulator*]' => 'arm64' }
 end
