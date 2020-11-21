@@ -9,7 +9,7 @@ Pod::Spec.new do |spec|
     spec.author       = { "Shubham Rathi" => "rathishubham017@gmail.com" }
     spec.source       = { :git => 'https://github.com/rathishubham7/web3swift.git', :tag => spec.version.to_s }
     spec.source_files = "Sources/web3swift/{Contract,Convenience,EthereumABI,EthereumAddress,HookedFunctions,KeystoreManager,Promises,SwiftRLP,Transaction,Web3,Browser}/*.swift", "Sources/web3swift/{Tokens,Utils}/**/*.swift", "Sources/secp256k1/include/*.{h,c}"
-    spec.vendored_libraries  = 'Sources/secp256k1/lib/libsecp256k1-torus.a'
+    spec.vendored_libraries  = 'Sources/secp256k1/lib/libTorus-libsecp256k1.a'
     spec.preserve_paths = 'Sources/secp256k1'
     spec.pod_target_xcconfig = {
       'HEADER_SEARCH_PATHS' => '"${PODS_TARGET_SRCROOT}/Sources/secp256k1/include"',
