@@ -13,7 +13,8 @@ Pod::Spec.new do |spec|
     spec.preserve_paths = 'Sources/secp256k1'
     spec.pod_target_xcconfig = {
       'HEADER_SEARCH_PATHS' => '"${PODS_TARGET_SRCROOT}/Sources/secp256k1/include"',
-      'LIBRARY_SEARCH_PATHS' => '"${PODS_TARGET_SRCROOT}/Sources/secp256k1/lib"'
+      'LIBRARY_SEARCH_PATHS' => '"${PODS_TARGET_SRCROOT}/Sources/secp256k1/lib"',
+      'EXCLUDED_ARCHS[sdk=iphonesimulator*]' => 'arm64'
     }
     spec.swift_version = '5.0'
     spec.module_name = 'web3swift'
@@ -22,6 +23,5 @@ Pod::Spec.new do |spec|
     spec.dependency 'BigInt', '~> 5.0'
     spec.dependency 'Starscream', '~> 3.1.0'
     spec.dependency 'CryptoSwift', '~> 1.0.0'
-    spec.pod_target_xcconfig = { 'EXCLUDED_ARCHS[sdk=iphonesimulator*]' => 'arm64' }
     spec.user_target_xcconfig = { 'EXCLUDED_ARCHS[sdk=iphonesimulator*]' => 'arm64' }
 end
